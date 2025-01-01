@@ -1,0 +1,22 @@
+<div class="summary-container">
+    <h2>Financial Summary</h2>
+    <div class="summary-card">
+      <h3>Total Investments</h3>
+      <p>{{ investments | currency: 'INR' }}</p>
+    </div>
+  
+    <div class="summary-card">
+      <h3>Total Savings</h3>
+      <p>{{ savings | currency: 'INR' }}</p>
+    </div>
+  
+    <div class="summary-card">
+      <h3>Total Expenses</h3>
+      <p>{{ expenses | currency: 'INR' }}</p>
+    </div>
+  
+    <div class="summary-total">
+      <h3>Net Total</h3>
+      <p>{{ totalFinance | currency: 'INR' }}</p>
+    </div>
+  </div>  

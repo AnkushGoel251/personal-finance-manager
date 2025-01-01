@@ -1,0 +1,33 @@
+<div class="investments">
+  <h2>Investments</h2>
+  <div class="investments-list">
+    <div class="investment-item" *ngFor="let investment of investments; let i = index">
+      <input
+        type="text"
+        [(ngModel)]="investment.name"
+        placeholder="Investment Type"
+        class="type-input"
+        (ngModelChange)="handleInputChange(i)"
+      />
+      <input
+        type="number"
+        [(ngModel)]="investment.amount"
+        placeholder="Amount"
+        class="amount-input"
+        (ngModelChange)="handleInputChange(i)"
+      />
+      <input
+        type="number"
+        [(ngModel)]="investment.growth"
+        placeholder="Growth (%)"
+        class="growth-input"
+        (ngModelChange)="handleInputChange(i)"
+      />
+      <button class="delete-button" (click)="deleteInvestment(i)">Delete</button>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="add-investment" (click)="addInvestment()">Add New Investment</button>
+    <button class="save-changes" (click)="saveChanges()">Save Changes</button>
+  </div>
+</div>

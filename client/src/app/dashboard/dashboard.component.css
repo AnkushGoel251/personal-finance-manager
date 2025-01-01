@@ -1,0 +1,138 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6200ea; /* Purple Material theme */
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .header .tabs {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header .tabs button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+  }
+  
+  .header .tabs button.active,
+  .header .tabs button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .header .dropdown {
+    display: flex;
+    align-items: center;
+  }
+
+  /* User Icon */
+.dropdown {
+    position: relative;
+    margin-right: 2rem;
+  }
+  
+  .user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .user-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    margin-top: 70px; /* Offset for the fixed header */
+    padding: 20px;
+    background-color: #333;
+    overflow-y: auto;
+  }
+  
+  /* Footer */
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .footer a {
+    margin: 0 10px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.3s;
+  }
+  
+  .footer a:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header .tabs {
+      gap: 10px;
+    }
+  
+    .header .tabs button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  
+    .footer img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  

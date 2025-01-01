@@ -1,0 +1,56 @@
+<div class="user-profile">
+    <h2>User Profile</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          placeholder="Enter your name"
+        />
+      </div>
+  
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="Enter your email"
+          readonly
+        />
+      </div>
+  
+      <!-- Contact -->
+      <div class="form-group">
+        <label for="contact">Contact</label>
+        <input
+          type="text"
+          id="contact"
+          formControlName="contact"
+          placeholder="Enter your contact number"
+        />
+      </div>
+  
+      <!-- Address -->
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea
+          id="address"
+          formControlName="address"
+          rows="3"
+          placeholder="Enter your address"
+        ></textarea>
+      </div>
+  
+      <!-- Buttons -->
+      <div class="buttons">
+        <button type="submit" [disabled]="!profileForm.valid">Save Changes</button>
+        <button type="button" (click)="onBack()">Back</button>
+      </div>
+    </form>
+  </div>
+  

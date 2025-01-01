@@ -1,0 +1,47 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="dashboard">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">Personal Finance</div>
+      <nav class="tabs">
+        <button (click)="setActiveTab('summary')" [class.active]="activeTab === 'summary'">Summary</button>
+        <button (click)="setActiveTab('expenses')" [class.active]="activeTab === 'expenses'">Expenses</button>
+        <button (click)="setActiveTab('savings')" [class.active]="activeTab === 'savings'">Savings</button>
+        <button (click)="setActiveTab('investments')" [class.active]="activeTab === 'investments'">Investments</button>
+      </nav>
+      <div class="dropdown">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="onLogout()">Logout</button>
+          <button mat-menu-item (click)="goToProfile()">User Profile</button>
+        </mat-menu>
+      </div>
+    </header>
+  
+    <!-- Main Content -->
+    <main class="main-content">
+      <ng-container [ngSwitch]="activeTab">
+        <app-summary *ngSwitchCase="'summary'"></app-summary>
+        <app-expenses *ngSwitchCase="'expenses'"></app-expenses>
+        <app-savings *ngSwitchCase="'savings'"></app-savings>
+        <app-investments *ngSwitchCase="'investments'"></app-investments>
+        <div *ngSwitchDefault>Select a tab to view details.</div>
+      </ng-container>
+    </main>
+  
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="https://github.com/your-profile" target="_blank">
+        <img src="assets/github-icon.png" alt="GitHub" />
+      </a>
+      <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+        <img src="assets/linkedin-icon.png" alt="LinkedIn" />
+      </a>
+      <a href="https://your-portfolio.com" target="_blank">
+        <img src="assets/portfolio-icon.png" alt="Portfolio" />
+      </a>
+    </footer>
+  </div>  

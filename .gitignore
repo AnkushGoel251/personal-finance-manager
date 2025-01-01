@@ -1,0 +1,25 @@
+# General
+.DS_Store
+*.log
+*.env
+
+# Backend
+/backend/target
+/backend/*.class
+/backend/*.log
+/backend/*.jar
+/backend/*.war
+/backend/*.ear
+/backend/*.iml
+/backend/.idea
+/backend/.project
+/backend/.classpath
+/backend/.settings/
+/backend/bin/
+/backend/node_modules/
+
+# Frontend
+/client/dist
+/client/node_modules
+/client/.angular
+/client/.idea

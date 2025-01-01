@@ -1,0 +1,18 @@
+<div class="expense-container">
+    <h2>Manage Expenses</h2>
+  
+    <div class="expense-list">
+      <div class="expense-item" *ngFor="let category of expenseCategories">
+        <div class="category-name">{{ category.name }}</div>
+        <div class="category-amount">
+          <input
+            type="number"
+            [(ngModel)]="category.amount"
+            placeholder="Enter amount"
+          />
+        </div>
+      </div>
+    </div>
+  
+    <button class="save-button" (click)="saveExpenses()">Save Changes</button>
+  </div>  

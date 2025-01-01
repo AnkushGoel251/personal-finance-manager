@@ -1,0 +1,8 @@
+{
+    "savings": [
+      { "id": "1", "type": "Emergency Fund", "amount": 5000 },
+      { "id": "2", "type": "Retirement", "amount": 8000 },
+      { "id": "3", "type": "WompWomp", "amount": 800000 }
+    ]
+  }
+  

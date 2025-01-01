@@ -1,0 +1,26 @@
+<div class="savings">
+  <h2>Savings</h2>
+  <div class="savings-list">
+    <div class="savings-item" *ngFor="let saving of savings; let i = index" [hidden]="saving.rowStatus === 'DELETED'">
+      <input
+        type="text"
+        [(ngModel)]="saving.name"
+        placeholder="Savings Type"
+        class="type-input"
+        (ngModelChange)="handleInputChange(i)"
+      />
+      <input
+        type="number"
+        [(ngModel)]="saving.amount"
+        placeholder="Amount"
+        class="amount-input"
+        (ngModelChange)="handleInputChange(i)"
+      />
+      <button class="delete-button" (click)="deleteSaving(i)">Delete</button>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="add-saving" (click)="addSaving()">Add New Saving</button>
+    <button class="save-changes" (click)="saveChanges()">Save Changes</button>
+  </div>
+</div>
