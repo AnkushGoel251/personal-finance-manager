@@ -14,5 +14,5 @@ This repository contains the source code for the Personal Finance Management app
 ### Frontend
 1. Navigate to the `client/` folder.
 2. Install dependencies:
-   ```bash
-   npm install
+```bash
+npm install
